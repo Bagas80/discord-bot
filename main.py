@@ -17,10 +17,11 @@ async def on_message(message):
     if message.content.lower() == "hai":
         await message.channel.send("Halo juga 👋")
 
-    if "kamu siapa" in message.content.lower():
-        await message.channel.send("Aku bot auto respond dari Railway 😎")
+    if "bot" in message.content.lower():
+        await message.channel.send("Halo, ada yag bisa saya bantu 😎")
 
-    if message.content.lower().startswith("!ping"):
-        await message.channel.send("🏓 Pong!")
+    if message.content.lower().startswith("tolol"):
+        await message.channel.send("Gak usah toxic gua ban juga lu ")
 
 client.run(os.environ['TOKEN'])
+
