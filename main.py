@@ -28,7 +28,8 @@ async def on_message(message):
 
     if message.content.lower() == "host":
     # Walau keyword-nya "host", kita akan tag #support
-    channel = discord.utils.get(message.guild.text_channels, name="🎫・support")
+    channel = discord.utils.get(message.guild.text_channels, name__contains="support")
+
     if channel:
         await message.channel.send(f"Host ada di {channel.mention}")
     else:
@@ -36,6 +37,7 @@ async def on_message(message):
 
 
 client.run(os.environ['TOKEN'])
+
 
 
 
