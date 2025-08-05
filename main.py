@@ -27,13 +27,15 @@ async def on_message(message):
         await massage.channel.sed("Wa'alaikumsallam")
 
     if message.content.lower() == "host":
-        # Ganti 'host' dengan nama channel kamu
-        channel = discord.utils.get(message.guild.text_channels, name="support")
-        if channel:
-            await message.channel.send(f"Host-nya ada di {channel.mention}")
-        else:
-            await message.channel.send("Channel #host tidak ditemukan 😢")
+    # Walau keyword-nya "host", kita akan tag #support
+    channel = discord.utils.get(message.guild.text_channels, name="🎫・support")
+    if channel:
+        await message.channel.send(f"Host ada di {channel.mention}")
+    else:
+        await message.channel.send("Channel #support tidak ditemukan 😢")
+
 
 client.run(os.environ['TOKEN'])
+
 
 
