@@ -23,13 +23,12 @@ async def on_message(message):
     if message.content.lower().startswith("tolol"):
         await message.channel.send("Gak usah toxic gua ban juga lu ")
 
-    if "p" in massage.content.lower():
-        await massage.channel.sed("Wa'alaikumsallam")
+    if "p" in message.content.lower():
+        await message.channel.send("Wa'alaikumsallam")
 
     if message.content.lower() == "host":
-    # Walau keyword-nya "host", kita akan tag #support
+        
     channel = discord.utils.get(message.guild.text_channels, name__contains="support")
-
     if channel:
         await message.channel.send(f"Host ada di {channel.mention}")
     else:
@@ -37,6 +36,7 @@ async def on_message(message):
 
 
 client.run(os.environ['TOKEN'])
+
 
 
 
