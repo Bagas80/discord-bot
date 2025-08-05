@@ -24,7 +24,7 @@ async def on_message(message):
         await message.channel.send("Gak usah toxic gua ban juga lu ")
 
     if "p" in message.content.lower():
-        await message.channel.send("Wa'alaikumsallam")
+        await message.channel.send("Waalaikumsallam")
 
     if message.content.lower() == "host":
         
@@ -36,6 +36,7 @@ async def on_message(message):
 
 
 client.run(os.environ['TOKEN'])
+
 
 
 
