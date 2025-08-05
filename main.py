@@ -26,7 +26,7 @@ async def on_message(message):
     if "p" in message.content.lower():
         await message.channel.send("Waalaikumsallam")
 
-    elif "sepi" in message.content.lower():
+    if "sepi" in message.content.lower():
         await message.channel.send("soalnya kalo rame lanjut part 2 xixixi")
 
     if message.content.lower().startswith("owner"):
@@ -34,6 +34,7 @@ async def on_message(message):
 
 
 client.run(os.environ['TOKEN'])
+
 
 
 
