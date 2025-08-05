@@ -26,16 +26,9 @@ async def on_message(message):
     if "p" in message.content.lower():
         await message.channel.send("Waalaikumsallam")
 
-    if message.content.lower() == "host":
-        
-    channel = discord.utils.get(message.guild.text_channels, name__contains="support")
-    if channel:
-        await message.channel.send(f"Host ada di {channel.mention}")
-    else:
-        await message.channel.send("Channel #support tidak ditemukan 😢")
-
 
 client.run(os.environ['TOKEN'])
+
 
 
 
