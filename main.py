@@ -23,17 +23,18 @@ async def on_message(message):
     if message.content.lower().startswith("tolol"):
         await message.channel.send("Gak usah toxic gua ban juga lu ")
 
-    if "p" in message.content.lower():
-        await message.channel.send("Waalaikumsallam")
+    if message.content.lower().strip() == "p":
+    await message.channel.send("Waalaikumsallam")
 
     if "sepi" in message.content.lower():
-        await message.channel.send("soalnya kalo rame lanjut part 2 xixixi")
+    await message.channel.send("soalnya kalo rame lanjut part 2 xixixi")
 
     if message.content.lower().startswith("owner"):
         await message.channel.send("Owner sibuk geyzz")
 
 
 client.run(os.environ['TOKEN'])
+
 
 
 
